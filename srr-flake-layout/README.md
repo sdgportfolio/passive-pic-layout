@@ -3,7 +3,7 @@ A parametric square split-ring resonator with a dielectric flake
 bridging the ring's split gap. Supplements a COMSOL simulation of a
 gold SRR + NbOI2 flake device.
 
-![SRR with flake preview](SRR with flake KLayout.png)
+![SRR with flake preview](srr_with_flake_klayout.png)
 The GDS file srr_with_flake.gds is also uploaded.
 
 ## Design
