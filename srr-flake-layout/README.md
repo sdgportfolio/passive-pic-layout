@@ -4,6 +4,7 @@ bridging the ring's split gap. Supplements a COMSOL simulation of a
 gold SRR + NbOI2 flake device.
 
 ![SRR with flake preview](SRR with flake KLayout.png)
+The GDS file srr_with_flake.gds is also uploaded.
 
 ## Design
 - The ring is formed as a boolean subtraction of two concentric squares
