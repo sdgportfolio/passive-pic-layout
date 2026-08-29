@@ -61,26 +61,17 @@ See the [SRR documentation](srr/README.md) for its dimensions, layer map, usage 
 
 The MZI project uses a 500 nm × 220 nm silicon waveguide and a 140.27 µm arm-length difference to separate 1550 nm and 1548 nm wavelengths.
 
-The device was simulated using Lumerical MODE and INTERCONNECT and achieved:
+### Features
+
 - Target wavelengths: **1548 nm and 1550 nm**
 - Simulated power transmission: **99.84%**
 - Extinction ratio: approximately **40 dB**
 - 1548 nm routed to the upper output
 - 1550 nm routed to the lower output
-
-The parametric GDS layout was generated using GDSFactory and inspected in KLayout.
+- GDSII generation
+- KLayout-compatible output
 
 See the [MZI project README](mzi/README.md) for the complete simulation workflow, design parameters, results, and limitations.
-
-### Planned Features
-
-- Parameterized arm-length difference
-- 1×2 splitter and 2×2 combiner integration
-- Automated optical routing
-- Optical ports for circuit assembly
-- Path-length reporting
-- Layout verification
-- GDSII export
 
 ## Planned 1×4 MMI Splitter
 
