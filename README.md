@@ -9,7 +9,7 @@ This project demonstrates reusable component generation, hierarchical layout, la
 | Component | Description | Status |
 |---|---|---|
 | [Split-Ring Resonator](srr/) | Parameterized SRR with a separately defined material-flake footprint centered over its capacitive gap | Complete |
-| [Mach–Zehnder Interferometer](mzi/) | Asymmetric MZI wavelength-demultiplexer layout targeting 1548 nm and 1550 nm | Planned |
+| [Mach–Zehnder Interferometer](mzi/) | Asymmetric MZI wavelength-demultiplexer layout targeting 1548 nm and 1550 nm | Complete |
 | [Multimode Interference Coupler](mmi/) | 1×4 MMI splitter layout targeting equal power distribution across four output ports | Planned |
 
 ## Repository Structure
@@ -18,19 +18,27 @@ This project demonstrates reusable component generation, hierarchical layout, la
 passive-pic-layout/
 ├── README.md
 ├── LICENSE
+└── mmi/
+    └── README.md
+├── mzi/
+│   └── README.md
+│   └── mzi_demux_layout.py
+│   └── mzi_demux_layout.gds
+│   ├── lumerical/
+│   │   ├── neff_vs_wavelength_sweep.png
+│   │   └── wg_mode.png
+│   ├── results/
+│   ├── mzi_demux_layout.gds
+│   └── mzi_demux_layout.py
 ├── srr/
 │   ├── README.md
 │   ├── requirements.txt
 │   ├── srr_with_flake.py
 │   ├── srr_with_flake.gds
 │   └── srr_with_flake_klayout.png
-├── mzi/
-│   └── README.md
-└── mmi/
-    └── README.md
 ```
 
-The MZI and MMI directories will be expanded as their implementations are completed.
+The MMI directory will be expanded as its implementations are completed.
 
 ## Split-Ring Resonator
 
@@ -49,9 +57,20 @@ The layout supports an electromagnetic study of a gold split-ring resonator coup
 
 See the [SRR documentation](srr/README.md) for its dimensions, layer map, usage instructions, and generated layout.
 
-## Planned Mach–Zehnder Interferometer
+## Mach–Zehnder Interferometer
 
-The MZI project will implement an asymmetric Mach–Zehnder interferometer for wavelength demultiplexing. The path-length difference and routing geometry will be parameterized for operation around 1548 nm and 1550 nm.
+The MZI project uses a 500 nm × 220 nm silicon waveguide and a 140.27 µm arm-length difference to separate 1550 nm and 1548 nm wavelengths.
+
+The device was simulated using Lumerical MODE and INTERCONNECT and achieved:
+- Target wavelengths: **1548 nm and 1550 nm**
+- Simulated power transmission: **99.84%**
+- Extinction ratio: approximately **40 dB**
+- 1548 nm routed to the upper output
+- 1550 nm routed to the lower output
+
+The parametric GDS layout was generated using GDSFactory and inspected in KLayout.
+
+See the [MZI project README](mzi/README.md) for the complete simulation workflow, design parameters, results, and limitations.
 
 ### Planned Features
 
