@@ -136,7 +136,7 @@ The target optical performance of the MZI and MMI must also be confirmed through
 
 - [x] Parameterized SRR with flake
 - [x] SRR geometry validation and GDSII export
-- [ ] 1548/1550 nm MZI demultiplexer layout
+- [x] 1548/1550 nm MZI demultiplexer layout
 - [ ] 1×4 equal-power MMI splitter layout
 - [ ] Continuous-integration checks
 
